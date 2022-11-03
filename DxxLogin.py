@@ -27,7 +27,7 @@ def run(playwright):
         verifyCode = ocr.main('verifyCode.png')
         page.locator('//*[@id="verifyCode"]').fill(verifyCode)
         page.locator('//*[@id="loginform"]/ul/li[4]/button').click()
-        page.wait_for_timeout(1000)
+        page.wait_for_timeout(10000)
         if page.url != 'https://m.bjyouth.net/site/login':
             break
     
