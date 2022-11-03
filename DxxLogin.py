@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 
 import ocr
 
-USERNAME = os.environ['USERNAME']
-PASSWORD = os.environ['PASSWORD']
+USERNAME = "13518822317"
+PASSWORD = "a1047969038"
 
 Orgid = ''
 cookies = ''
@@ -19,6 +19,7 @@ def run(playwright):
 
     while True:
         LoginURL = 'https://m.bjyouth.net/site/login'
+#                   https://m.bjyouth.net/site/login
         page.goto(LoginURL)
         page.locator('//*[@id="username"]').fill(USERNAME)
         page.locator('//*[@id="password"]').fill(PASSWORD)
